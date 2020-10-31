@@ -1,0 +1,9 @@
+/home/osman/Desktop/Projects/github.com/Chameleon/src/bin/Debug/netcoreapp3.1/Chameleon.deps.json
+/home/osman/Desktop/Projects/github.com/Chameleon/src/bin/Debug/netcoreapp3.1/Chameleon.dll
+/home/osman/Desktop/Projects/github.com/Chameleon/src/bin/Debug/netcoreapp3.1/Chameleon.pdb
+/home/osman/Desktop/Projects/github.com/Chameleon/src/obj/Debug/netcoreapp3.1/Chameleon.csprojAssemblyReference.cache
+/home/osman/Desktop/Projects/github.com/Chameleon/src/obj/Debug/netcoreapp3.1/Chameleon.AssemblyInfoInputs.cache
+/home/osman/Desktop/Projects/github.com/Chameleon/src/obj/Debug/netcoreapp3.1/Chameleon.AssemblyInfo.cs
+/home/osman/Desktop/Projects/github.com/Chameleon/src/obj/Debug/netcoreapp3.1/Chameleon.csproj.CoreCompileInputs.cache
+/home/osman/Desktop/Projects/github.com/Chameleon/src/obj/Debug/netcoreapp3.1/Chameleon.dll
+/home/osman/Desktop/Projects/github.com/Chameleon/src/obj/Debug/netcoreapp3.1/Chameleon.pdb

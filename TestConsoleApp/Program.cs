@@ -12,44 +12,7 @@ namespace TestConsoleApp
 {
     public class TestConfig
     {
-        private readonly IConfigReader<TestConfig> _configReader;
-
-        public TestConfig(IConfigReader<TestConfig> configReader)
-        {
-            _configReader = configReader;
-        }
-        
-        
- 
-    }
-    
-    
-    
-    
-    
-    
-    public class SomeService
-    {
-        private readonly IConfigReader<TestConfig> _configReader;
-
-        public SomeService(IConfigReader<TestConfig> configReader)
-        {
-            _configReader = configReader;
-        }
-
-    }
-
-    
-    
-    
-    
-    
-    
-
-
-    public class TestConfigSub
-    {
-        public string ProjectName2 { get; set; }
+        public string TestProp { get; set; }
     }
 
     class Program
@@ -69,27 +32,15 @@ namespace TestConsoleApp
             var provider = serviceProvider.BuildServiceProvider();
 
 
-   
-
-
             var configReader = provider.GetService<IConfigReader<TestConfig>>();
 
-            var  config = configReader.GetConfig();
-
-
-            if (config.c)
-            {
-                
-            }
-            
-            var value2 = value;
-            var value3 = value2;
+            var config = configReader.GetConfig();
 
 
             for (int i = 0; i < 2222; i++)
             {
                 Thread.Sleep(1500);
-                Console.WriteLine(value3.ToJson());
+                Console.WriteLine(config.ToJson());
             }
         }
     }

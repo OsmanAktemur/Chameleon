@@ -5,11 +5,7 @@ using NUnit.Framework;
 
 namespace Chameleon.Tests
 {
-    public class TestConfig
-    {
-        public string ProjectName { get; set; }
-    }
-
+ 
     public class Tests
     {
         [SetUp]
@@ -18,26 +14,9 @@ namespace Chameleon.Tests
         }
 
         [Test]
-        public void TestConfigs()
+        public void Should_Read_Config_Given_MongoDb_Collection()
         {
-            MongoDbConfigReader<TestConfig> reader = new MongoDbConfigReader<TestConfig>(
-                "",
-                "Configs",
-                "EndorAPIConfigs"
-            );
-
-
-
-
-            var x = reader.GetConfig();
-
-            for (int i = 0; i < 14342; i++)
-            {
-                Thread.Sleep(2000);
-                Console.WriteLine(x.ToJson());
-
-            }
-            
+            //TODO:Should be implemented
             
             Assert.Pass();
         }
