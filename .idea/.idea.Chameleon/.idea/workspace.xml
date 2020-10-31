@@ -23,10 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cde5c49f-4f9d-4ded-872e-f6fae533f0d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Chameleon.Tests/obj/Debug/netcoreapp3.1/Chameleon.Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Chameleon.Tests/obj/Debug/netcoreapp3.1/Chameleon.Tests.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chameleon.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Chameleon.Tests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestConsoleApp/obj/Debug/netcoreapp3.1/TestConsoleApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestConsoleApp/obj/Debug/netcoreapp3.1/TestConsoleApp.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestConsoleApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestConsoleApp/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +32,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/osman/Desktop/Projects/github.com/Chameleon/Chameleon.Tests/MongoDbConfigReaderTest.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Chameleon.Tests/MongoDbConfigReaderTest.cs" />
+        <option value="$PROJECT_DIR$/TestConsoleApp/Program.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1jeiWEaLwBfVt6f7qAzhufWpLUY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -45,6 +54,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
     <configuration name="TestConsoleApp" type="DotNetProject" factoryName=".NET Project">
@@ -75,13 +85,14 @@
       <option name="presentableId" value="Default" />
       <updated>1604170989023</updated>
       <workItem from="1604170994506" duration="50000" />
+      <workItem from="1604173860036" duration="328000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -93,6 +104,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
