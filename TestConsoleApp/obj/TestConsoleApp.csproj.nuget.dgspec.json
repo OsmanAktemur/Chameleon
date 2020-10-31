@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/osman/Desktop/Projects/github.com/Chameleon/TestConsoleApp/TestConsoleApp.csproj": {}
+  },
+  "projects": {
+    "/home/osman/Desktop/Projects/github.com/Chameleon/TestConsoleApp/TestConsoleApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/osman/Desktop/Projects/github.com/Chameleon/TestConsoleApp/TestConsoleApp.csproj",
+        "projectName": "TestConsoleApp",
+        "projectPath": "/home/osman/Desktop/Projects/github.com/Chameleon/TestConsoleApp/TestConsoleApp.csproj",
+        "packagesPath": "/home/osman/.nuget/packages/",
+        "outputPath": "/home/osman/Desktop/Projects/github.com/Chameleon/TestConsoleApp/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/osman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/osman/Desktop/Projects/github.com/Chameleon/src/Chameleon.csproj": {
+                "projectPath": "/home/osman/Desktop/Projects/github.com/Chameleon/src/Chameleon.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/osman/Desktop/Projects/github.com/Chameleon/src/Chameleon.csproj": {
+      "version": "1.0.2",
+      "restore": {
+        "projectUniqueName": "/home/osman/Desktop/Projects/github.com/Chameleon/src/Chameleon.csproj",
+        "projectName": "Chameleon",
+        "projectPath": "/home/osman/Desktop/Projects/github.com/Chameleon/src/Chameleon.csproj",
+        "packagesPath": "/home/osman/.nuget/packages/",
+        "outputPath": "/home/osman/Desktop/Projects/github.com/Chameleon/src/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/osman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

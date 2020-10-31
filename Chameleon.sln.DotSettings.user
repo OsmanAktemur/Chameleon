@@ -1,0 +1,16 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=04f77533_002Df196_002D4da0_002D9749_002D8f32c32aebb7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::4B201830-A4C6-4368-BE67-741CD411CD71::.NETCoreApp,Version=v3.1::Chameleon.Tests.Tests.TestConfigs&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::4B201830-A4C6-4368-BE67-741CD411CD71::.NETCoreApp,Version=v3.1::Chameleon.Tests.Tests&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f8ce3625_002D89f5_002D4351_002Dbf78_002D89d3c3110079/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestConfigs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::4B201830-A4C6-4368-BE67-741CD411CD71::.NETCoreApp,Version=v3.1::Chameleon.Tests.Tests.TestConfigs&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
