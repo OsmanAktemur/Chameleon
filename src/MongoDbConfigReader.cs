@@ -70,7 +70,6 @@ namespace Chameleon
                 throw new Exception(
                     "Config collection document count must be only '1'. Please delete other config documents");
             }
-
             this.config = allConfigDocuments.FirstOrDefault();
         }
 
