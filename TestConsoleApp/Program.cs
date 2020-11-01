@@ -15,6 +15,7 @@ namespace TestConsoleApp
     {
         public string TestProp { get; set; }
         
+        
     }
 
     class Program
