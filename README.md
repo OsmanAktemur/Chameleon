@@ -26,7 +26,7 @@ This pckages helps to mange real-time config / feature toggles for MongoDB
 }
 
 </code></pre>
-<pre><code class="has-line-data" data-line-start="33" data-line-end="40" class="language-sh">serviceProvider.AddSingleton&lt;IConfigReader&lt;TestConfig&gt;&gt;(new MongoDbConfigReader&lt;TestConfig&gt;(
+<pre><code class="has-line-data" data-line-start="33" data-line-end="40" class="language-sh">serviceProvider.AddSingleton&lt;IConfigReader&lt;TestConfig&gt;&gt;(MongoDbConfigReader&lt;TestConfig&gt;.Create(
     <span class="hljs-string">"MongoDbConString"</span>,
     <span class="hljs-string">"MongoDbConfigCollectionName"</span>,
     <span class="hljs-string">"MongoDbConfigDbName"</span>
