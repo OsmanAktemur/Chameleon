@@ -1,5 +1,6 @@
 # Chameleon
-This pckages helps to mange real-time config / feature toggles for MongoDB
+This pckage helps to mange real-time config / feature toggles for MongoDB
+Note: This package need MondoGb 3.6+ for work with change streams. See details https://docs.mongodb.com/manual/changeStreams/
 
 
 
