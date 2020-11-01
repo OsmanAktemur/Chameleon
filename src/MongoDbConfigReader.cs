@@ -11,34 +11,37 @@ using MongoDB.Bson.Serialization.Conventions;
 
 namespace Chameleon
 {
-    public class MongoDbConfigReader<T> : IConfigReader<T>
+    public class MongoDbConfigReader<T> : IConfigReader<T> where T : new()
     {
         private ConfigEntity<T> config;
- 
+
         private IMongoDatabase database;
         private IMongoCollection<ConfigEntity<T>> collection;
+        private IMongoClient mongoClient;
 
 
-        public MongoDbConfigReader(string mongoDbConnectionString, string configDbName, string configCollectionName)
+        public static async Task<MongoDbConfigReader<T>> Create(string mongoDbConnectionString, string configDbName,
+            string configCollectionName)
         {
-            
-            var conventionPack = new ConventionPack { new IgnoreExtraElementsConvention(true) };
+            var reader = new MongoDbConfigReader<T>(mongoDbConnectionString, configDbName, configCollectionName);
+
+
+            await reader.InitialConfigs();
+
+            reader.Watch();
+
+            return reader;
+        }
+
+        private MongoDbConfigReader(string mongoDbConnectionString, string configDbName, string configCollectionName)
+        {
+            var conventionPack = new ConventionPack {new IgnoreExtraElementsConvention(true)};
             ConventionRegistry.Register("IgnoreExtraElements", conventionPack, type => true);
-            
-            
-            IMongoClient mongoClient;
+
 
             mongoClient = new MongoClient(mongoDbConnectionString);
             database = mongoClient.GetDatabase(configDbName);
             collection = database.GetCollection<ConfigEntity<T>>(configCollectionName);
-
-            
-  
-            
-            InitialConfigs().GetAwaiter().GetResult();
-
- 
-            Watch();
         }
 
 
@@ -52,11 +55,14 @@ namespace Chameleon
                 var initialConfig = new ConfigEntity<T>()
                 {
                     UpdatedDate = DateTime.UtcNow,
+                    Config = new T()
                 };
 
                 await collection.InsertOneAsync(initialConfig);
 
                 this.config = initialConfig;
+
+                return;
             }
 
             if (allConfigDocuments.Count() != 1)
@@ -66,35 +72,21 @@ namespace Chameleon
             }
 
             this.config = allConfigDocuments.FirstOrDefault();
- 
         }
 
         private async Task Watch()
         {
-            CancellationToken stoppingToken = new CancellationToken();
-
             await Task.Factory.StartNew(async () =>
+            {
+                using (var cursor = await collection.WatchAsync())
                 {
-                    using (var cursor = await collection.WatchAsync())
+                    foreach (var change in cursor.ToEnumerable())
                     {
-                        foreach (var change in cursor.ToEnumerable())
-                        {
-                           // Console.WriteLine("degistii");
-                            // await collection.UpdateOneAsync(x => x.Id == this.config.Id,
-                            //     new UpdateDefinitionBuilder<ConfigEntity<T>>()
-                            //         .Set(p => p.UpdatedDate, DateTime.UtcNow));
-
-                            
-                            //this.config.Config = change.FullDocument.Config;
- 
-                            
-                            PropertyCopier<T,T>.Copy(change.FullDocument.Config,this.config.Config);
-
-                             
-                        }
+                        
+                        PropertyCopier<T, T>.Copy(change.FullDocument.Config, this.config.Config);
                     }
                 }
-                , stoppingToken);
+            });
         }
 
 

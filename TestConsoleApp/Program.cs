@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 using Chameleon;
 using Chameleon.Contracts;
 using Chameleon.Entities;
@@ -13,16 +14,17 @@ namespace TestConsoleApp
     public class TestConfig
     {
         public string TestProp { get; set; }
+        
     }
 
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var serviceProvider = new ServiceCollection();
 
 
-            serviceProvider.AddSingleton<IConfigReader<TestConfig>>(new MongoDbConfigReader<TestConfig>(
+            serviceProvider.AddSingleton<IConfigReader<TestConfig>>(await MongoDbConfigReader<TestConfig>.Create(
                 "",
                 "Configs",
                 "EndorAPIConfigs"
