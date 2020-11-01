@@ -20,13 +20,20 @@ namespace Chameleon
         private IMongoClient mongoClient;
 
 
-        public static MongoDbConfigReader<T> Create(string mongoDbConnectionString, string configDbName,
-            string configCollectionName)
+        public static MongoDbConfigReader<T> Create(
+            string mongoDbConnectionString,
+            string configDbName,
+            string configCollectionName,
+            bool enabledAutoRefresh = true)
         {
             var reader = new MongoDbConfigReader<T>(mongoDbConnectionString, configDbName, configCollectionName);
             
             reader.InitialConfigs();
-            reader.StartWatching();
+
+            if (enabledAutoRefresh)
+            {
+                reader.StartWatching();
+            }
 
             return reader;
         }
