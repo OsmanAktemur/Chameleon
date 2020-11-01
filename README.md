@@ -4,7 +4,7 @@ This pckages helps to mange real-time config / feature toggles for MongoDB
 
 
 <h3 class="code-line" data-line-start=0 data-line-end=1 ><a id="Installation_0"></a>Installation</h3>
-<pre><code class="has-line-data" data-line-start="3" data-line-end="5" class="language-sh">dotnet add package Chameleon --version <span class="hljs-number">1.0</span>.<span class="hljs-number">2</span>
+<pre><code class="has-line-data" data-line-start="3" data-line-end="5" class="language-sh">dotnet add package Chameleon
 </code></pre>
 <h3 class="code-line" data-line-start=7 data-line-end=8 ><a id="Usage_7"></a>Usage</h3>
 <p class="has-line-data" data-line-start="9" data-line-end="10">Example config class</p>
