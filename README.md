@@ -33,7 +33,7 @@ This pckages helps to mange real-time config / feature toggles for MongoDB
 ));
 
 </code></pre>
-<p class="has-line-data" data-line-start="41" data-line-end="42">Get config. If config document updates at mongoDb this  will be updates as well</p>
+<p class="has-line-data" data-line-start="41" data-line-end="42">Get config. If config document updates at MongoDb this config object  will be updates as well immidiately. So it does not necessary to get from db all the time or cache the config with expire date</p>
 <pre><code class="has-line-data" data-line-start="43" data-line-end="47" class="language-sh">        var configReader = provider.GetService&lt;IConfigReader&lt;TestConfig&gt;&gt;();
         var config = configReader.GetConfig();
 
