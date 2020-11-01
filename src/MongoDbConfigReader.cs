@@ -20,15 +20,13 @@ namespace Chameleon
         private IMongoClient mongoClient;
 
 
-        public static async Task<MongoDbConfigReader<T>> Create(string mongoDbConnectionString, string configDbName,
+        public static MongoDbConfigReader<T> Create(string mongoDbConnectionString, string configDbName,
             string configCollectionName)
         {
             var reader = new MongoDbConfigReader<T>(mongoDbConnectionString, configDbName, configCollectionName);
-
-
-            await reader.InitialConfigs();
-
-            reader.Watch();
+            
+            reader.InitialConfigs();
+            reader.StartWatching();
 
             return reader;
         }
@@ -45,9 +43,9 @@ namespace Chameleon
         }
 
 
-        private async Task InitialConfigs()
+        private  void InitialConfigs()
         {
-            var allConfigDocumentsCursor = await collection.FindAsync(new BsonDocument());
+            var allConfigDocumentsCursor = collection.Find(new BsonDocument());
             var allConfigDocuments = allConfigDocumentsCursor.ToList();
 
             if (!allConfigDocuments.Any())
@@ -58,7 +56,7 @@ namespace Chameleon
                     Config = new T()
                 };
 
-                await collection.InsertOneAsync(initialConfig);
+                collection.InsertOne(initialConfig);
 
                 this.config = initialConfig;
 
@@ -73,15 +71,14 @@ namespace Chameleon
             this.config = allConfigDocuments.FirstOrDefault();
         }
 
-        private async Task Watch()
+        private Task StartWatching()
         {
-            await Task.Factory.StartNew(async () =>
+           return Task.Factory.StartNew(async () =>
             {
                 using (var cursor = await collection.WatchAsync())
                 {
                     foreach (var change in cursor.ToEnumerable())
                     {
-                        
                         PropertyCopier<T, T>.Copy(change.FullDocument.Config, this.config.Config);
                     }
                 }

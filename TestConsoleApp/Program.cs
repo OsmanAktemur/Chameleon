@@ -20,12 +20,12 @@ namespace TestConsoleApp
 
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection();
 
 
-            serviceProvider.AddSingleton<IConfigReader<TestConfig>>(await MongoDbConfigReader<TestConfig>.Create(
+            serviceProvider.AddSingleton<IConfigReader<TestConfig>>(MongoDbConfigReader<TestConfig>.Create(
                 "",
                 "Configs",
                 "EndorAPIConfigs"
