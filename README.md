@@ -29,8 +29,6 @@ Note: This package needs MongoDB 3.6+  for work with change streams. See details
 
 </code></pre>
 <pre>
- 
-
 <code class="has-line-data" data-line-start="33" data-line-end="40" class="language-sh">
 //NOTE: This is very important that MongoDbConfigReader should be single instance for managing MongoDb connections
 serviceProvider.AddSingleton&lt;IConfigReader&lt;TestConfig&gt;&gt;(MongoDbConfigReader&lt;TestConfig&gt;.Create(
